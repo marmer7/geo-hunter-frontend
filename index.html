@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sample JS Project frontend</title>
+    <!-- <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div id="new-location-container">
+        <form id="new-location-form">
+          <input type="text" name="location-latitude" id="new-location-latitude">
+          <input type="text" name="location-longitude" id="new-location-longitude">
+          <input type="submit" value="Save location">
+        </form>
+      </div>
+      <div id="locations-container">
+
+      </div>
+    </div>
+
+    <script type="text/javascript" src="src/components/location.js"></script>
+    <script type="text/javascript" src="src/adapters/locationsAdapter.js"></script>
+    <script type="text/javascript" src="src/components/locations.js"></script>
+    <script type="text/javascript" src="src/components/app.js"></script>
+    <script type="text/javascript" src="src/index.js"></script>
+  </body>
+</html>
