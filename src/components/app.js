@@ -1,5 +1,6 @@
-class App{
+class App {
   constructor() {
-    this.locations = new Locations()
+    this.quests = new Quests();
+    this.user_location = new UserLocation();
   }
 }
