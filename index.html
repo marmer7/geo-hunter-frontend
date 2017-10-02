@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>Sample JS Project frontend</title>
-    <!-- <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
   </head>
@@ -16,24 +15,12 @@
       </div>
       <button type"button">Add New Quest</button>
     </div>
-  <div id="map"></div>
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
-        });
-      }
-    </script>
+    <div id="map"></div>
 
     <script type="text/javascript" src="src/components/quest.js"></script>
     <script type="text/javascript" src="src/adapters/questsAdapter.js"></script>
-    <script type="text/javascript" src="src/components/quests.js"></script>
     <script type="text/javascript" src="src/components/user_location.js"></script>
     <script type="text/javascript" src="src/components/app.js"></script>
     <script type="text/javascript" src="src/index.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7b9309-W9JZ2lCWdLzzvoqaK_3SrUE7E&callback=initMap"
-    async defer></script>
   </body>
 </html>

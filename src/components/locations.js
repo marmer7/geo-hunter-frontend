@@ -19,12 +19,6 @@ class Locations {
       .then(res => this.render());
   }
 
-  handleAddLocation() {}
-
-  handleDeleteLocation() {}
-
-  removeDeletedLocation(deleteResponse) {}
-
   locationsHTML() {
     return this.locations.map(location => location.render()).join("");
   }

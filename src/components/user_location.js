@@ -22,7 +22,7 @@ class UserLocation {
     if (this.latitude && this.longitude) {
       // Quest.addDistance()
     } else {
-      this.getLocation()
+      this.getLocation();
     }
   }
 }
