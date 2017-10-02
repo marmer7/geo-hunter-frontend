@@ -1,19 +1,24 @@
 class UserLocation {
-  constructor() {}
+  constructor() {
+    this.latitude = 0;
+    this.longitude = 0;
+    this.getLocation();
+  }
 
   getLocation() {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(savePosition);
+      navigator.geolocation.getCurrentPosition(this.savePosition.bind(this));
     } else {
       alert("Geolocation is not supported by this browser.");
     }
   }
 
   savePosition(position) {
-    x.innerHTML =
-      "Latitude: " +
-      position.coords.latitude +
-      "<br>Longitude: " +
-      position.coords.longitude;
+    this.latitude = position.coords.latitude;
+    this.longitude = position.coords.longitude;
+    console.log(this.latitude);
+    console.log(this.longitude);
   }
+
+  distanceFromQuest() {}
 }
