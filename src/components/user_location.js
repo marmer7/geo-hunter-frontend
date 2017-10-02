@@ -1,7 +1,7 @@
 class UserLocation {
   constructor() {
-    this.latitude = 0;
-    this.longitude = 0;
+    this.latitude = false;
+    this.longitude = false;
     this.getLocation();
   }
 
@@ -16,9 +16,13 @@ class UserLocation {
   savePosition(position) {
     this.latitude = position.coords.latitude;
     this.longitude = position.coords.longitude;
-    console.log(this.latitude);
-    console.log(this.longitude);
   }
 
-  distanceFromQuest() {}
+  distanceFromQuest() {
+    if (this.latitude && this.longitude) {
+      // Quest.addDistance()
+    } else {
+      this.getLocation()
+    }
+  }
 }

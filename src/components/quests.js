@@ -1,12 +1,12 @@
 class Quests {
   constructor() {
-    this.initBindingsAndEventListeners();
+    // this.initBindingsAndEventListeners();
     this.quests = [];
     this.adapter = new QuestsAdapter();
     this.fetchAndLoadQuests();
   }
 
-  initBindingsAndEventListeners() {}
+  // initBindingsAndEventListeners() {}
 
   fetchAndLoadQuests() {
     this.adapter
@@ -30,6 +30,6 @@ class Quests {
   }
 
   render() {
-    $("#quests-container").html(`<ul>${this.questsHTML()}</ul>`);
+    $("#quest-list").html(`${this.questsHTML()}`);
   }
 }
