@@ -1,6 +1,7 @@
 class Quest {
   constructor(questJSON) {
     this.id = questJSON.id;
+    this.name = questJSON.name;
     this.questUser = questJSON.user;
     this.location = questJSON.location;
     this.distanceFromUser = "n/a";
@@ -10,7 +11,7 @@ class Quest {
 
   render() {
     return `<li id="${this.id}" class="quests" data-location="${this.location
-      .id}">${this.questUser.username} - ${this.location.name}</li>`;
+      .id}">${this.name} created by ${this.questUser.username}</li>`;
   }
 
   questsHTML() {
@@ -19,12 +20,6 @@ class Quest {
 
   appendHTML() {
     $("#quest-list").html(`${this.questsHTML()}`);
-  }
-
-  static findLocation(id) {
-    return Quest.all.find(function(q) {
-      return q.id === id;
-    }).location;
   }
 }
 
