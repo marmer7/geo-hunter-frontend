@@ -24,7 +24,7 @@ class App {
       let loc = Location.all.find(function(l) {
         return l.id == e.target.dataset.location;
       });
-      Quest.calcDistanceFromUser(localStorage.userCoord, loc.getLatLon());
+      Quest.calcDistanceFromUser(coordinates, loc.getLatLon());
     });
   }
 }

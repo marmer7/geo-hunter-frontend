@@ -27,10 +27,8 @@ class Quest {
       return this * Math.PI / 180;
     };
 
-    userCoord = userCoord.split(",");
-
-    let lat1 = parseFloat(parseFloat(userCoord[0]));
-    let lon1 = parseFloat(parseFloat(userCoord[1]));
+    let lat1 = userCoord[0];
+    let lon1 = userCoord[1];
     let lat2 = questCoord[0];
     let lon2 = questCoord[1];
 

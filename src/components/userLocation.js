@@ -19,6 +19,6 @@ class UserLocation {
     this.longitude = position.coords.longitude;
     // fetch post request to database storing user location
     this.adapter.postLocation(1, this.latitude, this.longitude);
-    localStorage.userCoord = [this.latitude, this.longitude];
+    coordinates = [this.latitude, this.longitude];
   }
 }

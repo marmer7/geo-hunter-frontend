@@ -4,6 +4,10 @@
   font-family: arial;
 }
 
+body {
+  background-color: #F1F5FA;
+}
+
 li {
   list-style: none;
 }
@@ -91,3 +95,70 @@ a {
   border: 2px dashed green;
   padding: 8%;
 }
+
+
+
+
+/*profile html styling below ------------------------- */
+
+.profile-container {
+  display: grid;
+  grid-template-columns: 5% 10% 10% 10% 10% 10% 10% 10% 10% 10% 5%;
+  grid-template-rows: 5% 10% 10% 10% 10% 5% 5% 10% 10% 10% 10% 5%;
+  height: 100vh;
+}
+
+#profile-header {
+  grid-column: 2 / 11;
+  grid-row: 2 / 5;
+  background-color: white;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+#thumbnail {
+  width: 120px;
+  border-radius: 100px;
+}
+
+#profile-body {
+  grid-column: 2 / 11;
+  grid-row: 5 / 12;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.body-detail {
+  background-color: #91BFF1;
+  width: 30%;
+  height: 90%;
+  overflow: scroll;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*<div class="profile-container">
+  <div id="profile-header">
+
+  </div>
+  <div id="profile-body">
+    <div id="profile-detail">
+
+    </div>
+    <div id="quests">
+
+    </div>
+    <div id="hunts">
+
+    </div>
+  </div>*/

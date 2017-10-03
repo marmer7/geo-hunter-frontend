@@ -1,4 +1,5 @@
 let app;
+let coordinates;
 
 $(function() {
   app = new App();
