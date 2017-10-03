@@ -6,6 +6,4 @@ class LocationsAdapter {
   getLocations() {
     return fetch(this.baseUrl).then(response => response.json());
   }
-
-  createLocation(latitude, longitude) {}
 }

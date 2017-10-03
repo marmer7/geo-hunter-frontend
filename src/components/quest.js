@@ -20,6 +20,12 @@ class Quest {
   appendHTML() {
     $("#quest-list").html(`${this.questsHTML()}`);
   }
+
+  static findLocation(id) {
+    return Quest.all.find(function(q) {
+      return q.id === id;
+    }).location;
+  }
 }
 
 Quest.all = [];

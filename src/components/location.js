@@ -1,14 +1,15 @@
 class Location {
-  constructor(locationJSON) {
-    this.name = locationJSON.name;
-    this.longitude = locationJSON.longitude;
-    this.latitude = locationJSON.latitude;
-    this.address = locationJSON.address;
-    this.id = locationJSON.id;
+  constructor(data) {
+    this.id = data.id;
+    this.name = data.name;
+    this.latitude = data.latitude;
+    this.longitude = data.longitude;
+    Location.all.push(this);
   }
 
-  render() {
-    return `<li id="${this.id}">${this.name} - lat: ${this.latitude} lon: ${this
-      .longitude}</li>`;
+  getLatLon() {
+    return { lat: this.latitude, lon: this.longitude };
   }
 }
+
+Location.all = [];

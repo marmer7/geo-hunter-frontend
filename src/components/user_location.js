@@ -17,12 +17,4 @@ class UserLocation {
     this.latitude = position.coords.latitude;
     this.longitude = position.coords.longitude;
   }
-
-  distanceFromQuest() {
-    if (this.latitude && this.longitude) {
-      // Quest.addDistance()
-    } else {
-      this.getLocation();
-    }
-  }
 }
