@@ -3,6 +3,7 @@ class UserLocation {
     this.latitude = false;
     this.longitude = false;
     this.getLocation();
+    this.adapter = new userLocationsAdapter();
   }
 
   getLocation() {
@@ -16,5 +17,8 @@ class UserLocation {
   savePosition(position) {
     this.latitude = position.coords.latitude;
     this.longitude = position.coords.longitude;
+    // fetch post request to database storing user location
+    this.adapter.postLocation(1, this.latitude, this.longitude);
+    localStorage.userCoord = [this.latitude, this.longitude];
   }
 }

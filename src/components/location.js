@@ -8,7 +8,7 @@ class Location {
   }
 
   getLatLon() {
-    return { lat: this.latitude, lon: this.longitude };
+    return [this.latitude, this.longitude];
   }
 }
 
