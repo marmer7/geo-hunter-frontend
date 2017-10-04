@@ -4,7 +4,6 @@ class User {
     this.username = userJSON.username
     this.quests = userJSON.quests
     this.points = userJSON.points
-    this.appendHTML()
   }
 
   appendHTML() {

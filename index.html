@@ -15,21 +15,28 @@
           <ul>
             <li id="signup">Sign Up</li>
             <li id="signin">Sign In</li>
+            <div id="profile-options" class="login_form">
+              <img src="./image/kanye.jpg" id="profile-img">
+              <div id="profile-options-inner">
+                <h2 id="view-profile">Profile</h2>
+                <h2 id="logout">Logout</h2>
+              </div>
+            </div>
           </ul>
         </div>
       </div>
       <div id="signup-div" class="login_form">
-        <form>
-          <input type="text" placeholder="Username">
-          <input type="text" placeholder="New Password">
-          <input type="text" placeholder="Confirm Password">
+        <form id="signup-form">
+          <input type="text" placeholder="Username" id="signup-username">
+          <input type="text" placeholder="New Password" id="signup-password">
+          <input type="text" placeholder="Confirm Password" id="signup-password-confirm">
           <input type="submit" value="Sign Up!">
         </form>
       </div>
       <div id="signin-div" class="login_form">
-        <form>
-          <input type="text" placeholder="Username">
-          <input type="text" placeholder="Password">
+        <form id="signin-form">
+          <input type="text" placeholder="Username" id="signin-username">
+          <input type="text" placeholder="Password" id="signin-password">
           <input type="submit" value="Signin">
         </form>
       </div>
@@ -55,6 +62,29 @@
       </div>
       <div id="map">
 
+      </div>
+    </div>
+
+
+    <!-- user profile modal ------------------>
+  <div class="profile-container">
+    <div class="profile-wrapper">
+        <div id="profile-header">
+          <img src="./image/kanye.jpg" id="thumbnail">
+          <h3 id="username">Tanye West</h3>
+          <h3 id="points">253 Points</h3>
+        </div>
+        <div id="profile-body">
+          <div class="body-detail">
+            <h3>My Quest</h3>
+            <ul id="profile-quest-list">
+
+            </ul>
+          </div>
+          <div class="body-detail">
+            <h3>My Hunt</h3>
+          </div>
+        </div>
       </div>
     </div>
 
