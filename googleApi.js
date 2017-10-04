@@ -5,13 +5,36 @@ class GoogleApi {
     this.newQuestBtn = document.getElementById("newQuest");
     this.span = document.getElementsByClassName("close")[0];
     this.bindEventListeners();
+    this.jsonp();
   }
 
-  geocodeLookup(address) {
+  jsonp() {
+    var s = document.createElement("script");
+    s.src =
+      "https://maps.googleapis.com/maps/api/js?key=" +
+      this.key +
+      "&libraries=places&callback=activatePlacesSearch";
+    document.body.appendChild(s);
+  }
+
+  createQuest(res, questInfo) {
+    return {
+      name: questInfo.name,
+      prize: parseInt(questInfo.prize),
+      user_id: 1,
+      location: {
+        address: res.formatted_address,
+        latitude: res.geometry.location.lat,
+        longitude: res.geometry.location.lng
+      }
+    };
+  }
+
+  geocodeLookup(address, questInfo) {
     let param = address.split(" ").join("+");
     let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${param}&key=${this
       .key}`;
-    $.get(url).then(res => console.log(res.results[0]));
+    return $.get(url).then(res => this.createQuest(res.results[0], questInfo));
   }
 
   bindEventListeners() {

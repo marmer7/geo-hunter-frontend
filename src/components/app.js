@@ -5,9 +5,6 @@ class App {
     this.locationAdapter = new LocationsAdapter();
     this.googleApi = new GoogleApi();
     this.bindEventListeners();
-
-
-    this.questFormSubmit = this.questFormSubmit.bind(this)
   }
 
   fetchAndLoadQuests() {
@@ -30,9 +27,15 @@ class App {
       Quest.calcDistanceFromUser(coordinates, loc.getLatLon());
     });
 
-    questFormSubmit(e) {
+    function questFormSubmit(e) {
       e.preventDefault();
-      console.log(this.googleApi.geocodeLookup(e.target.search_term.value));
+      let questInfo = {
+        name: e.target.quest_name.value,
+        prize: e.target.prize.value
+      };
+      this.googleApi
+        .geocodeLookup(e.target.search_term.value, questInfo)
+        .then(res => this.questAdapter.postQuest(res));
       e.target.search_term.value = "";
       document.getElementById("newQuestModal").style.display = "none";
     }

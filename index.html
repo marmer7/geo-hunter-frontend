@@ -48,8 +48,9 @@
         <span class="close">&times;</span>
         <form id="new-quest-form">
           <input type="hidden" name="userId" value="1" />
-          Quest Name: <input type="text" name="quest_name" />
-          Location: <input type="text" id="search_term" />
+            Quest Name: <input type="text" name="quest_name" /><br>
+            Location: <input type="text" id="search_term" /><br>
+            Prize: <input type="number" id="prize" /><br>
           <input type="submit"></input>
         </form>
       </div>
@@ -63,7 +64,6 @@
 </script>
 
     <script type='text/javascript' src='config.js'></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQQwlPmRa3z9GBES7WP6WfOJStznlHAN8&libraries=places&callback=activatePlacesSearch"></script>
     <script type="text/javascript" src="googleApi.js"></script>
     <script type="text/javascript" src="src/components/quest.js"></script>
     <script type="text/javascript" src="src/adapters/questsAdapter.js"></script>
