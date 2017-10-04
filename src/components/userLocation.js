@@ -7,10 +7,8 @@ class UserLocation {
   }
 
   getLocation() {
-    if (navigator.geolocation) {
+    if (navigator.geolocation && !cookieUser) {
       navigator.geolocation.getCurrentPosition(this.savePosition.bind(this));
-    } else {
-      alert("Geolocation is not supported by this browser.");
     }
   }
 

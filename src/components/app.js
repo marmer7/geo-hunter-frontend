@@ -4,6 +4,8 @@ class App {
     this.questAdapter = new QuestsAdapter();
     this.locationAdapter = new LocationsAdapter();
     this.googleApi = new GoogleApi();
+    this.userAdapter = new UsersAdapter();
+
     this.bindEventListeners();
   }
 
@@ -17,6 +19,18 @@ class App {
     return this.locationAdapter
       .getLocations()
       .then(locations => locations.forEach(l => new Location(l)));
+  }
+
+  fetchPostNewUser(username, password) {
+    return this.userAdapter.newUser(username, password).then(res => console.log(res));
+  }
+
+  fetchSignInUser(username, password) {
+    return this.userAdapter.loginUser(username, password)
+  }
+
+  fetchAndLoadProfile() {
+    return this.userAdapter.getUser().then(user => new User(user));
   }
 
   bindEventListeners() {

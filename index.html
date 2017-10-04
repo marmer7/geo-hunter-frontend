@@ -13,10 +13,32 @@
         </div>
         <div id="nav">
           <ul>
-            <li><a href="#">Sign Up</a></li>
-            <li><a href="#">Sign In</a></li>
+            <li id="signup">Sign Up</li>
+            <li id="signin">Sign In</li>
+            <div id="profile-options" class="login_form">
+              <img src="./image/kanye.jpg" id="profile-img">
+              <div id="profile-options-inner">
+                <h2 id="view-profile">Profile</h2>
+                <h2 id="logout">Logout</h2>
+              </div>
+            </div>
           </ul>
         </div>
+      </div>
+      <div id="signup-div" class="login_form">
+        <form id="signup-form">
+          <input type="text" placeholder="Username" id="signup-username">
+          <input type="text" placeholder="New Password" id="signup-password">
+          <input type="text" placeholder="Confirm Password" id="signup-password-confirm">
+          <input type="submit" value="Sign Up!">
+        </form>
+      </div>
+      <div id="signin-div" class="login_form">
+        <form id="signin-form">
+          <input type="text" placeholder="Username" id="signin-username">
+          <input type="text" placeholder="Password" id="signin-password">
+          <input type="submit" value="Signin">
+        </form>
       </div>
       <div id="header-body">
         <!-- <h1>Welcome!</h1> -->
@@ -56,7 +78,28 @@
       </div>
     </div>
 
-    <script>
+    <div class="profile-container">
+      <div class="profile-wrapper">
+          <div id="profile-header">
+            <img src="./image/kanye.jpg" id="thumbnail">
+            <h3 id="username">Tanye West</h3>
+            <h3 id="points">253 Points</h3>
+          </div>
+          <div id="profile-body">
+            <div class="body-detail">
+              <h3>My Quest</h3>
+              <ul id="profile-quest-list">
+
+              </ul>
+            </div>
+            <div class="body-detail">
+              <h3>My Hunt</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<script>
     function activatePlacesSearch() {
   var input = document.getElementById("search_term");
   var autocomplete = new google.maps.places.Autocomplete(input);
@@ -66,8 +109,10 @@
     <script type='text/javascript' src='config.js'></script>
     <script type="text/javascript" src="googleApi.js"></script>
     <script type="text/javascript" src="src/components/quest.js"></script>
+    <script type="text/javascript" src="src/components/user.js"></script>
     <script type="text/javascript" src="src/adapters/questsAdapter.js"></script>
     <script type="text/javascript" src="src/components/location.js"></script>
+    <script type="text/javascript" src="src/adapters/usersAdapter.js"></script>
     <script type="text/javascript" src="src/adapters/locationsAdapter.js"></script>
     <script type="text/javascript" src="src/components/userLocation.js"></script>
     <script type="text/javascript" src="src/adapters/userLocationsAdapter.js"></script>
