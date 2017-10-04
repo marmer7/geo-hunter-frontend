@@ -3,6 +3,7 @@ class App {
     this.userLocation = new UserLocation();
     this.questAdapter = new QuestsAdapter();
     this.locationAdapter = new LocationsAdapter();
+    this.userAdapter = new UsersAdapter();
 
     this.bindEventListeners();
   }
@@ -17,6 +18,10 @@ class App {
     return this.locationAdapter
       .getLocations()
       .then(locations => locations.forEach(l => new Location(l)));
+  }
+
+  fetchAndLoadProfile() {
+    return this.userAdapter.getUser().then(user => new User(user));
   }
 
   bindEventListeners() {

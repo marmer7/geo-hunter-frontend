@@ -39,6 +39,43 @@ a {
   align-items: center;
 }
 
+.login_form {
+  display: none;
+  grid-column: 8 / 10;
+  grid-row: 1 / 4;
+  padding-top: 21%;
+}
+
+.login_form form {
+  display: flex;
+  background-color: green;
+  padding: 10px;
+  justify-content: space-between;
+  border-radius: 10px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login_form form input {
+  width: 75%;
+  height: 30px;
+  font-size: 20px;
+  margin-bottom: 2px;
+  border-radius: 3px;
+  border: 0;
+}
+
+.login_form form input[type="submit"]{
+  width: 75%;
+  height: 30px;
+  margin-top: 7px;
+  background-color: white;
+}
+
+.login_form form input[type="submit"]:hover {
+  background-color: gray;
+}
+
 #nav ul {
   display: flex;
   justify-content: space-between;
@@ -136,7 +173,7 @@ a {
 
 .body-detail {
   background-color: #91BFF1;
-  width: 30%;
+  width: 48%;
   height: 90%;
   overflow: scroll;
   border-bottom-left-radius: 18px;

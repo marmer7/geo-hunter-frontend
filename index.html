@@ -13,10 +13,25 @@
         </div>
         <div id="nav">
           <ul>
-            <li><a href="#">Sign Up</a></li>
-            <li><a href="#">Sign In</a></li>
+            <li id="signup">Sign Up</li>
+            <li id="signin">Sign In</li>
           </ul>
         </div>
+      </div>
+      <div id="signup-div" class="login_form">
+        <form>
+          <input type="text" placeholder="Username">
+          <input type="text" placeholder="New Password">
+          <input type="text" placeholder="Confirm Password">
+          <input type="submit" value="Sign Up!">
+        </form>
+      </div>
+      <div id="signin-div" class="login_form">
+        <form>
+          <input type="text" placeholder="Username">
+          <input type="text" placeholder="Password">
+          <input type="submit" value="Signin">
+        </form>
       </div>
       <div id="header-body">
         <!-- <h1>Welcome!</h1> -->
@@ -36,7 +51,7 @@
         <ul id="quest-list">
 
         </ul>
-        <button type="button" name="button">Add New Quest</button> 
+        <button type="button" name="button">Add New Quest</button>
       </div>
       <div id="map">
 
@@ -44,8 +59,10 @@
     </div>
 
     <script type="text/javascript" src="src/components/quest.js"></script>
+    <script type="text/javascript" src="src/components/user.js"></script>
     <script type="text/javascript" src="src/adapters/questsAdapter.js"></script>
     <script type="text/javascript" src="src/components/location.js"></script>
+    <script type="text/javascript" src="src/adapters/usersAdapter.js"></script>
     <script type="text/javascript" src="src/adapters/locationsAdapter.js"></script>
     <script type="text/javascript" src="src/components/userLocation.js"></script>
     <script type="text/javascript" src="src/adapters/userLocationsAdapter.js"></script>
