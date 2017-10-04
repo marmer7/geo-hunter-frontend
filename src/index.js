@@ -1,6 +1,7 @@
 let app;
 let coordinates;
 let cookieUser;
+let user;
 
 $(function() {
   app = new App();
@@ -52,7 +53,7 @@ $('#signin').on('click', function() {
 });
 
 function loginSuccess(resp) {
-  let user = new User(resp)
+  user = new User(resp)
   cookieUser = user.id
   $('#signup').hide()
   $('#signin').hide()
@@ -70,7 +71,8 @@ $('#profile-options').mouseout(function() {
 })
 
 $('#view-profile').on('click', function() {
-  $('.profile-container').show()
+  $('.modal').show()
+  user.appendHTML()
 })
 
 function clickAwayHide(node) {

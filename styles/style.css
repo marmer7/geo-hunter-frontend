@@ -170,11 +170,6 @@ a {
   height: 100vh;
 }
 
-.profile-container {
-  display: none;
-}
-
-
 #profile-header {
   grid-column: 2 / 11;
   grid-row: 2 / 5;
@@ -204,13 +199,12 @@ a {
 .body-detail {
   background-color: #91BFF1;
   width: 48%;
-  height: 90%;
+  height: 270px;
   overflow: scroll;
+  padding: 8px;
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 
@@ -243,6 +237,10 @@ a {
   float: right;
   font-size: 28px;
   font-weight: bold;
+}
+
+.modal span {
+  float: right;
 }
 
 .close:hover,
