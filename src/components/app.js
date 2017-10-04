@@ -3,8 +3,11 @@ class App {
     this.userLocation = new UserLocation();
     this.questAdapter = new QuestsAdapter();
     this.locationAdapter = new LocationsAdapter();
-
+    this.googleApi = new GoogleApi();
     this.bindEventListeners();
+
+
+    this.questFormSubmit = this.questFormSubmit.bind(this)
   }
 
   fetchAndLoadQuests() {
@@ -26,5 +29,14 @@ class App {
       });
       Quest.calcDistanceFromUser(coordinates, loc.getLatLon());
     });
+
+    questFormSubmit(e) {
+      e.preventDefault();
+      console.log(this.googleApi.geocodeLookup(e.target.search_term.value));
+      e.target.search_term.value = "";
+      document.getElementById("newQuestModal").style.display = "none";
+    }
+
+    $("#new-quest-form").on("submit", questFormSubmit.bind(this));
   }
 }
