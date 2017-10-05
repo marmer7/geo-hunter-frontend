@@ -1,6 +1,6 @@
 class GoogleApi {
   constructor() {
-    this.key = config.GOOGLE_KEY;
+    // this.key = config.GOOGLE_KEY;
     this.modal = document.getElementById("newQuestModal");
     this.newQuestBtn = document.getElementById("newQuest");
     this.span = document.getElementsByClassName("close")[0];
