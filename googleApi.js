@@ -12,7 +12,7 @@ class GoogleApi {
     var s = document.createElement("script");
     s.src =
       "https://maps.googleapis.com/maps/api/js?key=" +
-      this.key +
+      "AIzaSyCQQwlPmRa3z9GBES7WP6WfOJStznlHAN8" +
       "&libraries=places&callback=activatePlacesSearch";
     document.body.appendChild(s);
   }
@@ -34,8 +34,7 @@ class GoogleApi {
 
   geocodeLookup(address, questInfo) {
     let param = address.split(" ").join("+");
-    let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${param}&key=${this
-      .key}`;
+    let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${param}&key=AIzaSyCQQwlPmRa3z9GBES7WP6WfOJStznlHAN8`;
     return $.get(url).then(res => this.createQuest(res.results[0], questInfo));
   }
 
