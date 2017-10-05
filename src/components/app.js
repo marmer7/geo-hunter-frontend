@@ -49,7 +49,9 @@ class App {
       e.preventDefault();
       let questInfo = {
         name: e.target.quest_name.value,
-        prize: e.target.prize.value
+        prize: e.target.prize.value,
+        description: e.target.description.value,
+        hint: e.target.hint.value
       };
       this.googleApi
         .geocodeLookup(e.target.search_term.value, questInfo)

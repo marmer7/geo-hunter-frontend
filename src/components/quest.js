@@ -4,6 +4,8 @@ class Quest {
     this.name = questJSON.name;
     this.questUser = questJSON.user;
     this.location = questJSON.location;
+    this.description = questJSON.description;
+    this.hint = questJSON.hint;
     this.distanceFromUser = "n/a";
     this.huntsAdapter = new HuntsAdapter();
     Quest.all.push(this);
@@ -26,6 +28,10 @@ class Quest {
   appendHTML() {
     $("#quest-list").html(`${this.questsHTML()}`);
     $(".hunt-quest").on("click", e => {
+      var huntQuest = Quest.all.find(function(quest) {
+        return quest.id == e.target.dataset.questid
+      }).location
+      huntLocation = [huntQuest.latitude, huntQuest.longitude]
       this.huntsAdapter.postHunt({
         user_id: cookieUser,
         quest_id: e.target.dataset.questid

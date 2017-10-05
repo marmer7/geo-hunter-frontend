@@ -2,6 +2,9 @@ let app;
 let userCoordinates = [0, 0];
 let cookieUser;
 let user;
+let huntLocation;
+let distanceToHunt;
+let myInterval;
 
 $(function() {
   app = new App();

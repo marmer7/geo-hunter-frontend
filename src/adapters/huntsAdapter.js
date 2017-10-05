@@ -13,6 +13,7 @@ class HuntsAdapter {
       body: JSON.stringify(huntData)
     })
       .then(res => res.json())
+      // .then(res => console.log(res))
       .then(res => new Hunt(res));
   }
 }

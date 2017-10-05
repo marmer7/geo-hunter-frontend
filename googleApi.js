@@ -21,6 +21,8 @@ class GoogleApi {
     return {
       name: questInfo.name,
       prize: parseInt(questInfo.prize),
+      description: questInfo.description,
+      hint: questInfo.hint,
       user_id: cookieUser,
       location: {
         address: res.formatted_address,

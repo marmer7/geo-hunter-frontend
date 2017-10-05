@@ -10,6 +10,9 @@ body {
 
 li {
   list-style: none;
+  border: 1px solid gray;
+  border-bottom: 5px;
+  padding: 6px;
 }
 
 a {
@@ -148,8 +151,8 @@ a {
 }
 
 #quests-container {
-  grid-column: 1 / 5;
-  grid-row: 1 / 11;
+  grid-column: 2 / 10;
+  grid-row: 2 / 10;
   border: 2px dashed purple;
   padding: 8%;
 }
