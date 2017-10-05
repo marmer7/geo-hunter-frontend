@@ -1,6 +1,6 @@
 class userLocationsAdapter {
   constructor() {
-    this.baseUrl = "http://localhost:3000/api/v1/user_locations";
+    this.baseUrl = "https://aqueous-wave-80105.herokuapp.com/api/v1/user_locations";
   }
 
   postLocation(id, lat, lon) {

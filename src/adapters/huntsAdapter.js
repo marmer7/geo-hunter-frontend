@@ -1,6 +1,6 @@
 class HuntsAdapter {
   constructor() {
-    this.baseUrl = "http://localhost:3000/api/v1/hunts";
+    this.baseUrl = "https://aqueous-wave-80105.herokuapp.com/api/v1/hunts";
   }
 
   postHunt(huntData) {

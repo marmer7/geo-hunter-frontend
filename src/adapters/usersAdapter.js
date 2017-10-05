@@ -1,7 +1,7 @@
 class UsersAdapter {
   constructor() {
-    this.baseUrl = `http://localhost:3000/api/v1/users/${cookieUser}`;
-    this.postUser = 'http://localhost:3000/api/v1/users'
+    this.baseUrl = `https://aqueous-wave-80105.herokuapp.com/api/v1/users/${cookieUser}`;
+    this.postUser = "https://aqueous-wave-80105.herokuapp.com/api/v1/users";
   }
 
   getUser() {
@@ -12,7 +12,7 @@ class UsersAdapter {
     return fetch(this.postUser, {
       method: "POST",
       headers: {
-        "Accept": "application/json",
+        Accept: "application/json",
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
@@ -20,20 +20,23 @@ class UsersAdapter {
         password: passWord,
         points: 200
       })
-    }).then(res => res.json())
+    }).then(res => res.json());
   }
 
   loginUser(userName, passWord) {
-    return fetch('http://localhost:3000/api/v1/users/login', {
-      method: "POST",
-      headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        username: userName,
-        password: passWord
-      })
-    }).then(res => res.json())
+    return fetch(
+      "https://aqueous-wave-80105.herokuapp.com/api/v1/users/login",
+      {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          username: userName,
+          password: passWord
+        })
+      }
+    ).then(res => res.json());
   }
 }
