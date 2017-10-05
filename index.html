@@ -54,7 +54,7 @@
 
     <div class="map-container">
       <div id="quests-container">
-        <h2> All Quests </h2>
+        <h2 id="quest-hunt-h2"> All Quests </h2>
         <ul id="quest-list">
 
         </ul>
@@ -78,7 +78,7 @@
       </div>
     </div>
 
-    <div class="modal">
+    <div id="profileModal" class="modal">
       <span><h1>X</h1><span>
       <div class="modal-content">
           <div id="profile-header">
@@ -101,7 +101,7 @@
       </div>
 
 <script>
-    function activatePlacesSearch() {
+function activatePlacesSearch() {
   var input = document.getElementById("search_term");
   var autocomplete = new google.maps.places.Autocomplete(input);
 }
@@ -114,6 +114,8 @@
     <script type="text/javascript" src="src/adapters/questsAdapter.js"></script>
     <script type="text/javascript" src="src/components/location.js"></script>
     <script type="text/javascript" src="src/adapters/usersAdapter.js"></script>
+    <script type="text/javascript" src="src/components/hunt.js"></script>
+    <script type="text/javascript" src="src/adapters/huntsAdapter.js"></script>
     <script type="text/javascript" src="src/adapters/locationsAdapter.js"></script>
     <script type="text/javascript" src="src/components/userLocation.js"></script>
     <script type="text/javascript" src="src/adapters/userLocationsAdapter.js"></script>

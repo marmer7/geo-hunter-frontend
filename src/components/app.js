@@ -22,11 +22,13 @@ class App {
   }
 
   fetchPostNewUser(username, password) {
-    return this.userAdapter.newUser(username, password).then(res => console.log(res));
+    return this.userAdapter
+      .newUser(username, password)
+      .then(res => console.log(res));
   }
 
   fetchSignInUser(username, password) {
-    return this.userAdapter.loginUser(username, password)
+    return this.userAdapter.loginUser(username, password);
   }
 
   fetchAndLoadProfile() {
@@ -35,10 +37,12 @@ class App {
 
   bindEventListeners() {
     $("#quest-list").on("click", function(e) {
-      let loc = Location.all.find(function(l) {
-        return l.id == e.target.dataset.location;
-      });
-      Quest.calcDistanceFromUser(coordinates, loc.getLatLon());
+      // somehthing here
+    });
+
+    $(".hunt-quest").on("click", function(e) {
+      console.log(e.target);
+      // let hunt = new Hunt();
     });
 
     function questFormSubmit(e) {

@@ -5,13 +5,18 @@ class Quest {
     this.questUser = questJSON.user;
     this.location = questJSON.location;
     this.distanceFromUser = "n/a";
+    this.huntsAdapter = new HuntsAdapter();
     Quest.all.push(this);
     this.appendHTML();
   }
 
   render() {
     return `<li id="${this.id}" class="quests" data-location="${this.location
-      .id}">${this.name} created by ${this.questUser.username}</li>`;
+      .id}">${this.name} - <span> ${Quest.calcDistanceFromUser(
+      userCoordinates,
+      [this.location.latitude, this.location.longitude]
+    )} miles away</span><button href="#" data-questid="${this
+      .id}" class="hunt-quest">Hunt!</button></li>`;
   }
 
   questsHTML() {
@@ -20,6 +25,12 @@ class Quest {
 
   appendHTML() {
     $("#quest-list").html(`${this.questsHTML()}`);
+    $(".hunt-quest").on("click", e => {
+      this.huntsAdapter.postHunt({
+        user_id: cookieUser,
+        quest_id: e.target.dataset.questid
+      });
+    });
   }
 
   static calcDistanceFromUser(userCoord, questCoord) {
@@ -45,7 +56,7 @@ class Quest {
         Math.sin(dLon / 2);
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     this.distanceFromUser = R * c / 1.609344; // distance in miles
-    console.log(this.distanceFromUser);
+    return this.distanceFromUser.toFixed(2);
   }
 }
 

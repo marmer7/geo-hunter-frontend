@@ -19,6 +19,4 @@ class QuestsAdapter {
       .then(res => res.json())
       .then(res => new Quest(res));
   }
-
-  createQuest(latitude, longitude) {}
 }
